@@ -1,0 +1,61 @@
+*{
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+}
+#resume{
+  margin: 5px auto;
+  width: 95%;
+  height: 1000px;
+}
+.h{
+  line-height: 100px;
+  padding-left: 20px;
+  background-color: grey;
+  width: 100%;
+  height: 100px;
+}
+h2{
+  float: left;
+}
+ul{
+  float: left;
+  width: 82%;
+  padding-top: 10px;
+}
+.information ul li,
+.tel ul li{
+  float: left;
+}
+.clear{
+  content: "";
+  display: table;
+  clear: both;
+}
+ul li{
+  margin-right: 30px;
+}
+ul li strong{
+  margin-right: 10px;
+}
+ul li p{
+  margin: 5px 0;
+}
+.information,
+.tel,
+.ability,
+.education,
+.project{
+border: 1px solid silver;
+box-sizing: border-box;
+width: 100%;
+height: 150px;
+}
+h2{
+  margin: 0 0 1px;
+  width: 13%;
+  height: 150px;
+  background-color: silver;
+  text-align: center;
+  line-height: 150px;
+}
