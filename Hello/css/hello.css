@@ -1,0 +1,471 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+@font-face{
+  font-family: 'montserrat hairline';
+  src: url(../font/Montserrat-Hairline.otf) 
+}
+@font-face{
+  font-family: 'montserrat light';
+  src: url(../font/Montserrat-Light.otf) 
+}
+.clear{
+  content: "";
+  display: block;
+  clear: both;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+/* 第一部分 */
+#head{
+  width: 1600px;
+  height: 991px;
+  margin: 0 auto;
+  background-image: url(../images/head.png);
+}
+.black{
+  width: 1600px;
+  height: 991px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.black span{
+  font-family: 'montserrat hairline';
+  color: #eee8de;
+  display: block;
+  font-size: 58px;
+  padding: 195px 0 0 642px;
+}
+.black p{
+  font-family: 'montserrat hairline';
+  color: #c1bfba;
+  width: 760px;
+  height: 100px;
+  font-size: 20px;
+  padding: 70px 0 0 422px;
+  line-height: 35px;
+  text-align: center;
+}
+.table{
+  width: 973px;
+  height: 249px;
+  border: 1px solid #777169;
+  margin: 100px 0 0 315px;
+}
+.table span{
+  font-family: 'montserrat light';
+  font-size: 16px;
+  padding: 60px 0 0 370px;
+  color: #fff;
+}
+.black .table p{
+  font-family: 'montserrat light';
+  width: 300px;
+  height: 25px;
+  font-size: 12px;
+  padding: 20px 0 0 333px;
+  color: #636156;
+}
+.black .table form{
+  font-family: 'montserrat light';
+  margin: 40px 0 0 100px;
+}
+.black .table input{
+  padding-left: 20px;
+  margin-right: 30px;
+  width: 290px;
+  height: 50px;
+  border: 1px solid #777169;
+  background-color: transparent;
+  color: #5c5a58;
+}
+.black .table input:nth-child(1){
+  color: #fff;
+}
+.black .table button{
+  width: 125px;
+  height: 50px;
+  background-color: #fff;
+  font-size: 12px;
+  color: #141414;
+}
+/* 第二部分 */
+.center_1{
+  overflow: hidden;
+  width: 1600px;
+  height: 710px;
+  margin: 0 auto;
+  padding-top: 90px;
+  box-sizing: border-box;
+}
+.center_1 span{
+  font-family: 'montserrat light';
+  font-size: 14px;
+  padding-left: 690px;
+}
+.center_1 p{
+  width: 700px;
+  height: 102px;
+  font-family: 'montserrat hairline';
+  font-size: 42px;
+  padding: 40px 0 0 470px;
+  text-align: center;
+}
+.center_1 ul{
+  margin: 80px 0 0 270px;
+}
+.center_1 ul li{
+  width: 600px;
+  height: 160px;
+  float: left;
+  margin-right: 50px
+}
+.center_1 ul li .m{
+  float: right;
+  width: 400px;
+  height: 130px;
+  margin-right: 120px;
+}
+.center_1 ul li .m p{
+  font-family: 'montserrat light';
+  width: 200px;
+  height: 25px;
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.center_1 ul li .m span{
+  font-family: 'montserrat hairline';
+  width: 400px;
+  height: 400px;
+  padding: 0;
+}
+.center_1 ul li .m1 p{
+  margin-left: -43px;
+}
+.center_1 ul li .m2 p{
+  margin-left: -40px;
+}
+.center_1 ul li .m3 p{
+  margin-left: -14px;
+}
+.center_1 ul li .m4 p{
+  margin-left: -28px;
+}
+/* 第三部分 */
+.center_2{
+  width: 1600px;
+  height: 800px;
+  background-image: url(../images/tree_1.png);
+  margin: 0 auto;
+  position: relative;
+}
+.black_1{
+  width: 1600px;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.center_2 .left{
+  width: 520px;
+  height: 450px;
+  margin: 180px 0 0 310px;
+  font-family: 'montserrat hairline';
+}
+.center_2 .left p{
+  font-size: 42px;
+}
+.center_2 .left span{
+  display: block;
+  font-size: 18px;
+  padding-top: 50px;
+}
+.center_2 .left button{
+  margin-top: 55px;
+  width: 245px;
+  height: 65px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #6c736f;
+}
+.center_2 .left .active{
+  color: #d8d9d8;
+  background-color: transparent;
+}
+.center_2 .right{
+  width: 645px;
+  height: 600px;
+  position: absolute;
+  right: 0;
+  top: 105px;
+  border: 1px solid #929493;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+}
+.center_2 .right img{
+  position: relative;
+  top: 30px;
+  left: 60px;
+}
+/* 第四部分 */
+.center_3{
+  width: 1600px;
+  height: 580px;
+  margin: 0 auto;
+  font-family: 'montserrat hairline';
+  font-size: 42px;
+  overflow: hidden;
+}
+.center_3 span{
+  display: block;
+  font-size: 42px;
+  margin: 100px 0 0 530px;
+}
+.center_3 ul{
+  display: flex;
+  margin: 80px 0 0 325px;
+}
+.center_3 ul li{
+  width: 300px;
+  height: 290px;
+  margin-right: 70px;
+}
+.center_3 p{
+  font-size: 16px;
+  text-align: center;
+  line-height: 27px;
+}
+.center_3 img{
+  margin: 0 0 30px 70px;
+}
+/* 第五部分 */
+.center_4{
+  width: 1600px;
+  height: 1000px;
+  margin: 0 auto;
+  border: 1px solid #e7e7e7;  
+  border-width: 1px 0 1px 0;
+  box-sizing: border-box;
+  padding-top: 120px;
+}
+.center_4 .itree,
+.center_4 .ibird{
+  width: 985px;
+  height: 430px;
+  margin-left: 315px;
+}
+.center_4 .itree .tree,
+.center_4 .ibird .bird{
+  width: 330px;
+  height: 255px;
+}
+.center_4 span{
+  display: block;
+  font-size: 20px;
+  font-family: 'montserrat light';
+  margin-bottom: 40px;
+}
+.center_4 p{
+  font-size: 16px;
+  font-family: 'montserrat hairline';
+  line-height: 30px;
+}
+/* 第六部分 */
+.center_5{
+  width: 1600px;
+  height: 980px;
+  margin: 0 auto;
+  border: 1px solid #e7e7e7;  
+  border-width: 0 0 1px 0;
+  box-sizing: border-box;
+}
+.center_5 .ter{
+  width: 700px;
+  height: 110px;
+  margin: 100px 0 0 450px;
+  font-family: 'montserrat hairline';
+  text-align: center;
+}
+.center_5 .ter span{
+  display: block;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.center_5 .ter p{
+  font-size: 18px;
+  line-height: 25px;
+}
+.center_5 .teacher{
+  width: 1200px;
+  height: 710px; 
+  margin: 65px 0 0 315px;
+}
+.center_5 .teacher ul li{
+  width: 475px;
+  height: 345px;
+  float: left;
+  padding: 0 30px 30px 0;
+  position: relative;
+}
+.show{
+  position: absolute;
+  width: 475px;
+  height: 345px;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.show .show_1{
+  width: 195px;
+  height: 55px;
+  margin: 105px 0 0 140px;
+  font-family: 'montserrat hairline'; 
+  text-align: center;
+}
+.show .show_1 span{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.show .show_1 p{
+  font-size: 12px;
+   color: #99908c;
+}
+.show .show_2{
+  width: 260px;
+  height: 60px;
+  margin: 37px 0 0 128px;
+}
+.show .show_2 img{
+  margin-right: 20px;
+}
+.center_5 .teacher ul li:nth-child(1):hover .show{
+  display: block;
+}
+/* 第七部分 */
+.center_6{
+  width: 1600px;
+  height: 705px;
+  margin: 0 auto;
+}
+.center_6 .sign{
+  float: left;
+  width: 475px;
+  height: 565px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  border-radius: 10px 10px 10px 10px;
+  margin: 73px 0 0 313px;
+}
+.center_6 .sign span{
+  display: block;
+  font-family: 'montserrat light';
+  font-size: 16px;
+  margin: 50px 0 45px 120px;
+  color: #4e4e4e;
+}
+.center_6 .sign input{
+  width: 370px;
+  height: 55px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  color: #c4c4c4;
+  margin: 0 0 30px 55px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.center_6 .sign textarea{
+  font-family: 'montserrat light';
+  width: 370px;
+  height: 143px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  color: #c4c4c4;
+  margin:  0 0 30px 55px;
+  padding: 25px 0 0 20px;
+  font-size: 14px;
+}
+.center_6 .sign button{
+  width: 370px;
+  height: 50px;
+  color: #fff;
+  background-color: #000;
+  margin-left: 55px;
+}
+.center_6 .contacts{
+  width: 370px;
+  height: 370px;
+  float: right;
+  margin: 155px 320px 0 0;
+}
+.center_6 .contacts span{
+  font-family: 'montserrat hairline'; 
+  font-size: 42px;
+  margin-bottom: 40px;
+  display: block;
+}
+.center_6 .contacts p{
+  font-family: 'montserrat hairline'; 
+  font-size: 16px;
+  margin-bottom: 70px;
+}
+.center_6 .contacts ul{
+  width: 290px;
+  height: 175px;
+}
+.center_6 .contacts ul li{
+  width: 290px;
+  height: 55px;
+}
+.center_6 .contacts ul li p{
+  font-family: 'montserrat light';
+  font-size: 16px;
+  float: right;
+  margin: 0;
+}
+.center_6 .contacts ul li:nth-child(2) p{
+  position: relative;
+  left: -120px;
+}
+.center_6 .contacts ul li:nth-child(3) p{
+  position: relative;
+  left: -60px;
+}
+/* 第八部分 */
+.center_7{
+  width: 1600px;
+  height: 412px;
+  margin: 0 auto;
+  background-color: #141414;
+  overflow: hidden;
+}
+.center_7 ul{
+  width: 1185px;
+  height: 230px;
+  margin: 80px 0 0 205px;
+  display: flex;
+}
+.center_7 ul li{
+  width: 270px;
+  height: 230px;
+}
+.center_7 ul li span{
+  font-family: 'montserrat light';
+  font-size: 14px;
+  margin-bottom: 35px;
+  color: #fff;
+}
+.center_7 ul li p{
+  font-family: 'montserrat hairline';
+  font-size: 16px;
+  line-height: 47px;
+  color: #4e4e4e;
+}
