@@ -1,0 +1,623 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.color{
+  color: #475364;
+}
+.clear{
+  content: "";
+  display: block;
+  clear: both;
+}
+@font-face{
+  font-family: 'ProximaNova Regular';
+  src: url(../font/ProximaNova-Regular.otf) 
+}
+@font-face{
+  font-family: 'ProximaNova Semibold';
+  src: url(../font/ProximaNova-Semibold.otf) 
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+html,
+body{
+  display: flex;
+}
+/* 第一部分 */
+.picture{
+  width: 100px;
+  background-color: #1d2531; 
+}
+.picture ul{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.picture ul li{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.picture ul li img{
+  width: 60px;
+  height: 60px;
+}
+.picture .l{
+  position: fixed;
+  left: 25px;
+  bottom: 20px;
+}
+.picture .r{
+  position: fixed;
+  left: 60px;
+  bottom: 20px;
+}
+/* 第二部分 */
+.menu{
+  position: relative;
+  width: 250px;
+  background-color: #222c3c;
+}
+.menu .table_1{
+  width: 190px;
+  height: 255px;
+  border: 1px solid #2a3547;
+  border-width: 0 0 1px 0;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+.menu .table_1 .head1{
+  width: 190px;
+  height: 45px;
+  padding-top: 30px;
+}
+.menu .table_1 .head1 span{
+  font-family: 'ProximaNova Semibold';
+  font-size: 12px;
+}
+.menu .table_1 .w1{
+  margin-right: 130px;
+}
+.menu .table_1 ul{
+  width: 190px;
+  height: 180px;
+  box-sizing: border-box;
+}
+.menu .table_1 ul li{
+  width: 190px;
+  height: 36px;
+  box-sizing: border-box;
+}
+.menu .table_1 ul .num1{
+  width: 35px;
+  height: 25px;
+  background-color: #249af2;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  line-height: 25px;
+  float: right;
+  position: relative;
+  top: -20px;
+}
+.menu .table_1 ul li p{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  color: #b7c0cd;
+}
+.menu .table_2{
+  width: 190px;
+  height: 220px;
+  border: 1px solid #2a3547;
+  border-width: 0 0 1px 0;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+.menu .table_2 .head2{
+  width: 190px;
+  height: 38px;
+  padding-top: 30px;
+}
+.menu .table_2 .head2 span{
+  font-family: 'ProximaNova Semibold';
+  font-size: 12px;
+}
+.menu .table_2 .w1{
+  margin-right: 60px;
+}
+.menu .table_2 ul{
+  width: 190px;
+  height: 152px;
+  box-sizing: border-box;
+}
+.menu .table_2 ul li{
+  width: 190px;
+  height: 38px;
+  box-sizing: border-box;
+}
+.menu .table_2 ul li span{
+  color: #b7c0cd;
+  padding-right: 25px;
+}
+.menu .table_2 ul li p{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  color: #b7c0cd;
+}
+.menu .table_3{
+  width: 190px;
+  height: 490px;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+.menu .table_3 .head3{
+  width: 190px;
+  height: 40px;
+  padding-top: 30px;
+}
+.menu .table_3 .head3 span{
+  font-family: 'ProximaNova Semibold';
+  font-size: 12px;
+}
+.menu .table_3 .w1{
+  margin-right: 90px;
+}
+.menu .table_3 ul{
+  width: 190px;
+  height: 190px;
+  box-sizing: border-box;
+}
+.menu .table_3 ul li{
+  width: 190px;
+  height: 38px;
+  box-sizing: border-box;
+}
+.menu .table_3 ul li:nth-child(1) p{
+  color: #fff;
+}
+.menu .table_3 ul .num1{
+  width: 35px;
+  height: 25px;
+  background-color: #249af2;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  line-height: 25px;
+  float: right;
+  position: relative;
+  top: -20px;
+}
+.menu .table_3 img{
+  position: relative;
+  top: -120px;
+  left: 160px;
+}
+.menu .table_3 ul li p{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  color: #b7c0cd;
+}
+.menu .foot span{
+  color: #fff;
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  position: absolute;
+  left: 30px;
+  bottom: 40px;
+}
+.menu .foot .q{
+  position: absolute;
+  left: 141px;
+  bottom: 40px;
+}
+.menu .table_4{
+  width: 190px;
+  height: 5px;
+  background-color: #2d3848;
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  border-radius: 50px 50px 50px 50px;
+}
+.menu .table_5{
+  width: 40px;
+  height: 5px;
+  background: linear-gradient(to right, #7757d6, #9286d4);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px 50px 50px 50px;
+}
+/* 第三部分 */
+.message .up{
+  height: 80px;
+  display: flex;
+}
+.message .up span{
+  display: block;
+  font-family: 'ProximaNova Regular';
+  font-size: 24px;
+  margin: 30px 0 0 30px;
+}
+.message .up .sign{
+  width: 200px;
+  height: 80px;
+  margin: 0 30px 0 860px;
+}
+.message .up .sign img{
+  float: left;
+}
+.message .up .sign .peo{
+  margin-top: 15px;
+}
+.message .up .sign .jt{
+  margin-left: 30px;
+}
+.message .up .sign span{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  float: left;
+  margin: 12px 0 0 15px;
+  color: #b5b5b5;
+}
+.message .up .sign .name{
+  font-size: 16px;
+  color: #40a7f3;
+  margin: 25px 0 0 15px;
+}
+.message .down{
+  display: flex;
+}
+.message .down .lz .search{
+  width: 400px;
+  height: 70px;
+  border: 1px solid #e6e9ec;
+  border-width: 1px 1px 1px 0;
+}
+.message .down .lz .search input{
+  width: 340px;
+  height: 35px;
+  border: 1px solid #e6e9ec;
+  border-radius: 10px 10px 10px 10px;
+  margin: 18px 0 0 30px;
+  padding-left: 15px;
+  color: #b2bac8;
+}
+.message .down .lz .search span{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 360px;
+  top: -30px;
+  color: #9fa9ba;
+}
+.message .down .lz .w2{
+  width: 400px;
+  height: 130px;
+  border: 1px solid #e6e9ec;
+  border-width: 0 1px 1px 0;
+  position: relative;
+}
+.message .down .lz .w2 .v{
+  display: inline-block;
+  width: 3px;
+  height: 130px;
+  background-color: #2399f1;
+}
+.message .down .lz .w2 .vv{
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  left: 27px;
+}
+.message .down .lz img{
+  margin: 15px 0 0 30px;
+}
+.message .down .n1{
+  color: #90939a;
+  font-family: 'ProximaNova Semibold';
+  font-size: 16px;
+  position: absolute;
+  top: 25px;
+  left: 97px;
+}
+.message .down .n1 .blue{
+  color: #2399f1;
+}
+.message .down .n1 .bac{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #00aaff;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+.message .down .n2{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  position: absolute;
+  color: #e1e1e1;
+  top: 45px;
+  left: 97px;
+}
+.message .down .n3{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  color: #7f8fa4;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.message .down .n4{
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  line-height: 20px;
+  color: #636872;
+  position: absolute;
+  top: 75px;
+  left: 30px;
+  right: 10px;
+}
+.message .down .ry .berry{
+  height: 70px;
+  border: 1px solid #e6e9ec;
+  border-width: 1px 0 1px 0;
+  display: flex;
+}
+.message .down .ry .berry .n5{
+  font-family: 'ProximaNova Semibold';
+  font-size: 18px;
+  color: #585d68;
+  margin: 30px 0 0 30px;
+}
+.message .down .ry .berry .n6{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #00aaff;
+  border-radius: 50%;
+  margin: 34px 0 0 10px;
+}
+.message .down .ry .berry .r{
+  width: 307px;
+  height: 70px;
+  margin: 0 20px 0 336px;
+  display: flex;
+  font-size: 0;
+}
+.message .down .ry .berry .r .gg{
+  display: inline-block;
+  color: #9fa9ba;
+  background: linear-gradient(to bottom, #fff 0%,#f2f4f7 100%);
+  border: 1px solid #ced0da;
+  margin: 17px 0 0 0;
+  width: 36px;
+  height: 32px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 18px;
+}
+.message .down .ry .berry .r .n7{
+  border-radius: 5px 0 0 5px;
+}
+.message .down .ry .berry .r .n8{
+  border-radius: 0 0 0 0;
+  border-width: 1px 0 1px 0;
+}
+.message .down .ry .berry .r .n9{
+  border-radius: 0 5px 5px 0;
+}
+.message .down .ry .berry .r .r2{
+  width: 0;
+  height: 28px;
+  border-width: 0 1px 0 0;
+  border: 1px solid #f0f1f4;
+  margin: 20px 22px 0 22px;
+}
+.message .down .ry .berry .r .r3{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  margin: 28px 16px 0 0;
+}
+.message .down .ry .berry .r .n10{
+  border-radius: 5px 0 0 5px;
+}
+.message .down .ry .berry .r .n11{
+  border-radius: 0 5px 5px 0;
+  border-width: 1px 1px 1px 0;
+}
+.message .down .ry .mtu{
+  height: 310px;
+}
+.message .down .ry .mtu{
+  height: 300px;
+  border: 1px solid #d9dde3;
+  border-width: 0 0 1px 0;
+}
+.message .down .ry .mtu .m1{
+  position: relative;
+  width: 738px;
+  height: 83px;
+  margin: 25px 0 0 30px;
+}
+.message .down .ry .mtu .m2{
+  position: relative;
+  width: 738px;
+  height: 156px;
+  margin: 20px 0 0 30px;
+}
+.message .down .ry .mtu span,img{
+  float: left;
+}
+.message .down .ry .mtu .n12{
+  font-family: 'ProximaNova Semibold';
+  font-size: 16px;
+  margin: 5px 0 0 20px;
+  color: #585d68;
+}
+.message .down .ry .mtu .n13{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  margin: 7px 0 0 10px;
+  color: #7f8fa4;
+}
+.message .down .ry .mtu p{
+  position: absolute;
+  top: 30px;
+  left: 68px;
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  color: #797d86;
+  line-height: 20px;
+}
+.message .down .ry .n14{
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  display: block;
+  width: 85px;
+  height: 20px;
+  background-color: #fff;
+  position: relative;
+  top: -8px;
+  left: 370px;
+  text-align: center;
+  color: #a1adbc;
+}
+.message .down .ry .tue{
+  height: 350px;
+  border: 1px solid #a7d6f9;
+  border-width: 0 0 1px 0;
+}
+.message .down .ry .tue .m1{
+  position: relative;
+  width: 738px;
+  height: 64px;
+  margin: 5px 0 0 30px;
+}
+.message .down .ry .tue .m2{
+  position: relative;
+  width: 738px;
+  height: 120px;
+  margin: 20px 0 0 30px;
+}
+.message .down .ry .tue span,img{
+  float: left;
+}
+.message .down .ry .tue .n12{
+  font-family: 'ProximaNova Semibold';
+  font-size: 16px;
+  margin: 5px 0 0 20px;
+  color: #585d68;
+}
+.message .down .ry .tue .n13{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  margin: 7px 0 0 10px;
+  color: #7f8fa4;
+}
+.message .down .ry .tue p{
+  position: absolute;
+  top: 30px;
+  left: 68px;
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  color: #797d86;
+  line-height: 20px;
+}
+.message .down .ry .tue .img1{
+  margin: 17px 0 0 98px;
+}
+.message .down .ry .tue .img2{
+  margin: 17px 0 0 20px;
+}
+.message .down .ry .tue .fdj{
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  top: 45px;
+  left: -105px;
+}
+.message .down .ry .n15{
+  width: 125px;
+  color: #32a0f2;
+}
+.message .down .ry .news .m1{
+  position: relative;
+  width: 738px;
+  height: 60px;
+  margin: 10px 0 0 30px;
+}
+.message .down .ry .news span,img{
+  float: left;
+}
+.message .down .ry .news .n12{
+  font-family: 'ProximaNova Semibold';
+  font-size: 16px;
+  margin: 5px 0 0 20px;
+  color: #585d68;
+}
+.message .down .ry .news .n13{
+  font-family: 'ProximaNova Semibold';
+  font-size: 14px;
+  margin: 7px 0 0 10px;
+  color: #7f8fa4;
+}
+.message .down .ry .news .n16{
+  position: absolute;
+  top: 30px;
+  left: 68px;
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  color: #797d86;
+  line-height: 20px;
+}
+.message .down .ry .news .m3{
+  width: 770px;
+  height: 55px;
+  margin: 30px 0 0 30px;
+  border: 1px solid #dfe3e9;
+  border-radius: 5px 5px 5px 5px;
+}
+.message .down .ry .news .m3 .jh{
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(to bottom, #fff 0%,#f2f4f7 100%);
+  border: 1px solid #dfe3e9;
+  border-width: 0 1px 0 0;
+  font-size: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #9fa9ba;
+}
+.message .down .ry .news .m3 p{
+  font-family: 'ProximaNova Regular';
+  font-size: 14px;
+  color: #585d68;
+  padding: 20px 0 0 75px;
+  }
