@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+      var first = document.getElementById("first-number");
+      var second = document.getElementById("second-number");
+      var add = document.getElementById("add-btn");
+      var minus = document.getElementById("minus-btn");
+      var times = document.getElementById("times-btn");
+      var divide = document.getElementById("divide-btn");
+      var p = document.getElementById("result");
+      add.onclick = function () {
+        if (isNaN(+first.value) || isNaN(+second.value)) {
+          p.innerHTML = "error";
+        } else {
+          p.innerHTML = +first.value + +second.value;      
+            }
+         }  
+      minus.onclick = function () {
+        if (isNaN(+first.value) || isNaN(+second.value)) {
+          p.innerHTML = "error";
+        } else {
+          p.innerHTML = +first.value - +second.value;      
+            }
+         }
+      times.onclick = function () {
+        if (isNaN(+first.value) || isNaN(+second.value)) {
+          p.innerHTML = "error";
+        } else {
+          p.innerHTML = +first.value * +second.value;      
+            }
+         }
+      divide.onclick = function () {
+        if (isNaN(+first.value) || isNaN(+second.value)) {
+          p.innerHTML = "error";
+        } else {
+          if (+second.value == 0) {
+          p.innerHTML = "除数为0";
+          } else {
+          p.innerHTML = +first.value / +second.value;      
+            }
+         }
+      }     
+    </script>
+</body>
+</html>
