@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>example</title>
+    <style>
+      .img{
+        width: 480px;
+        height: 480px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img">
+    </div>
+    <script>
+      var t = 0;
+      var img = document.querySelector('.img');
+      img.style.backgroundImage = 'url(./images/erik_ce204002.jpg)';
+      img.style.backgroundRepeat = 'no-repeat';
+      var fx = true;
+      function animation () {
+        if (fx) {
+          if (t <= -8160) {
+            fx = false;
+          }
+          t -= 480;
+          img.style.backgroundPositionY = t + 'px';
+          setTimeout(animation,100);
+        } else {
+          if (t >= 0) {
+            fx = true;
+          }
+          t += 480;
+          img.style.backgroundPositionY = t + 'px';
+          setTimeout(animation,100);
+        }     
+      }
+      animation();
+    </script>
+  </body>
+</html>

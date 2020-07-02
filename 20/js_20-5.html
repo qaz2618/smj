@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>example</title>
+  </head>
+  <body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000;"></div>
+    <button id="fade-btn">淡出</button>
+    <script>
+      var id = document.querySelector('#fade-obj');
+      var btn = document.querySelector('#fade-btn');
+      var p = 1;
+      function dc() {
+        if (p < 0) {
+          btn.innerHTML = '淡入';
+          btn.removeAttribute('disabled','disabled');
+        } else{
+          p -= 0.1;
+          id.style.opacity = p;
+          setTimeout(dc,100);
+          btn.setAttribute('disabled','disabled');
+        }
+      }
+      function dr() {
+        if (p > 1) {
+          btn.innerHTML = '淡出';
+          btn.removeAttribute('disabled','disabled');
+        } else {
+          p += 0.1;
+          id.style.opacity = p;
+          setTimeout(dr,100);
+          btn.setAttribute('disabled','disabled');
+        }
+      }
+      btn.onclick = function () {
+        if (btn.textContent == '淡出') {
+          dc();
+        } else {
+          dr();
+        }
+      }
+    </script>
+  </body>
+</html>

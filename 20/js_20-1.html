@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show video box example</title>
+  </head>
+  <body>
+    <input id="name" type="text">    
+    <button id="submit-btn">Submit</button>
+    <script>
+      var btn = document.getElementById('submit-btn');
+      btn.onclick = function(){
+        var inputText = document.getElementById('name').value;  
+        console.log(inputText);
+      }
+      document.onkeydown = function getKey(){
+        if(event.keyCode == 13){
+          var inputText = document.getElementById('name').value;
+          console.log(inputText); 
+        }   
+        if(event.keyCode == 27){
+          var inputText = document.getElementById('name');
+          inputText.value = "";
+          inputText.focus();   
+        }
+      }
+    </script>
+  </body>
+</html>
