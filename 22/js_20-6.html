@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="queue-input" type="text">
+  <p id="queue-cont">队列内容：apple&lt;-pear</p>    
+  <button id="in-btn">入队</button>
+  <button id="out-btn">出队</button>
+  <button id="font-btn">打印队头元素内容</button>
+  <button id="empty-btn">判断队列是否为空</button>
+
+  <script>
+
+    var queue = ["apple", "pear"];
+    let btns = document.querySelectorAll('button');
+    let input = document.querySelector('#queue-input');
+    let p = document.querySelector('#queue-cont');
+
+    function rd() {
+      queue.unshift(input.value);
+      p.innerHTML="队列内容："+queue.join("&lt;-");
+      console.log(queue);
+    }
+    btns[0].onclick = rd;
+
+    function cd() {
+      queue.pop();
+      p.innerHTML="队列内容："+queue.join("&lt;-");
+      console.log(queue);
+    }
+    btns[1].onclick = cd;
+
+    function dt() {
+      let dtt = queue[0];
+      p.innerHTML="队列内容："+dtt;
+      console.log(queue);
+    }
+    btns[2].onclick = dt;
+
+    function dk() {
+      if (queue.length == 0) {
+        p.innerHTML="队列为空";
+      } else {
+        p.innerHTML="队列内容："+queue.join("&lt;-");
+      }
+    }
+    btns[3].onclick = dk;
+  </script>
+</body>
+</html>

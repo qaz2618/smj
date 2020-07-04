@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr1 = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+    function max(a,b) {
+      return a - b;
+    }
+    arr1.sort(max);
+    console.log(arr1);
+
+    var arr2 = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+    arr2.sort();
+    console.log(arr2);
+    console.log(arr2.reverse());
+    
+    var arr3 = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+    function max1(a,b) {
+      return b[1] - a[1];
+    }
+    arr3.sort(max1);
+    console.log(arr3);
+    
+    var arr4 = [
+    {
+        id: 1,
+        name: 'candy',
+        value: 40
+    }, {
+        id: 2,
+        name: 'Simon',
+        value: 50
+    }, {
+        id: 3,
+        name: 'Tony',
+        value: 45
+    }, {
+        id: 4,
+        name: 'Annie',
+        value: 60
+    }
+];
+    function max2(a,b) {
+      return a.value - b.value;
+    }
+    arr4.sort();
+    console.log(arr4);
+    
+  </script>
+</body>
+</html>
