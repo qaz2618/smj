@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id="year-select">
+  </select>
+
+  <select id="month-select">
+  </select>
+
+  <select id="day-select">
+  </select>
+
+  <select id="hour-select">
+  </select>
+
+  <select id="minite-select">
+  </select>
+
+  <select id="second-select">
+  </select>
+
+  <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+  <script>
+    // 初始化
+    let year = document.querySelector('#year-select');
+    let month = document.querySelector('#month-select');
+    let day = document.querySelector('#day-select');
+    let hour = document.querySelector('#hour-select');
+    let minite = document.querySelector('#minite-select');
+    let second = document.querySelector('#second-select');
+    let selects = document.getElementsByTagName('select');
+    let para = document.querySelector('#result-wrapper');
+
+    // 添加option标签
+    function option(j, parent, n) {
+      for (let i = 0; i < j; i++) {
+        let opt = document.createElement('option');
+        opt.value = i + n;
+        opt.innerHTML = i + n;
+        parent.appendChild(opt);
+      }
+    }
+
+    // 添加option标签成功
+    option(33, year, 2000);
+    option(12, month, 1);
+    option(31, day, 1);
+    option(24, hour, 0);
+    option(60, minite, 0);
+    option(60, second, 0);
+     
+    //  判断闰年
+    function leapYear(year, month) {
+      if (month == 2) {
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+          dayt = 29;
+        } else {
+        dayt = 28;
+          }
+      } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+          dayt = 30;
+        } else {
+          dayt = 31;
+          }
+      day.innerHTML = '';
+      option(dayt, day, 1);
+    }
+
+    // 根据月份改变option
+    for (let key in selects) {
+      selects[key].onchange = function () {
+        if (key === '0' || key === '1') {
+          yearValue = Number(document.getElementById('year-select').value);
+          monthValue = Number(document.getElementById('month-select').value);
+          leapYear(yearValue, monthValue);
+        }
+      }         
+    }
+    
+    // 补零
+    function addZero(a) {
+      if (a < 10) {
+        a = "0" + a;
+      }
+      return a;
+    }
+    // 星期几
+    function getweekday(weekday) {
+      switch (weekday) {
+        case 0:
+          d = "星期一"
+          break;
+        case 1:
+          d = "星期二"
+          break;
+        case 2:
+          d = "星期三"
+          break;
+        case 3:
+          d = "星期四"
+          break;
+        case 4:
+          d = "星期五"
+          break;
+        case 5:
+          d = "星期六"
+          break;
+        case 6:
+          d = "星期日"
+          break;
+      }
+      return d;
+    }  
+  </script>
+</body>
+</html>

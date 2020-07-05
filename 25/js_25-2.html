@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p class="time1"></p>
+  <p class="time2"></p>
+  <script>
+    let para1 = document.querySelector('.time1');
+    let para2 = document.querySelector('.time2');
+    function addZero(a) {
+      if (a < 10) {
+        a = "0" + a;
+      }
+      return a;
+    }
+    function changeHour(hour) {
+      if (hour > 12) {
+        hour = hour - 12;
+      }
+      return hour;
+    }
+    function getweekday1(weekday) {
+      switch (weekday) {
+        case 0:
+          d = "星期一"
+          break;
+        case 1:
+          d = "星期二"
+          break;
+        case 2:
+          d = "星期三"
+          break;
+        case 3:
+          d = "星期四"
+          break;
+        case 4:
+          d = "星期五"
+          break;
+        case 5:
+          d = "星期六"
+          break;
+        case 6:
+          d = "星期日"
+          break;
+      }
+      return d;
+    }
+    function getweekday2(weekday) {
+      switch (weekday) {
+        case 0:
+          d = "Monday"
+          break;
+        case 1:
+          d = "Tuesday"
+          break;
+        case 2:
+          d = "Wednesday"
+          break;
+        case 3:
+          d = "Thursday"
+          break;
+        case 4:
+          d = "Friday"
+          break;
+        case 5:
+          d = "Saturday"
+          break;
+        case 6:
+          d = "Sunday"
+          break;
+      }
+      return d;
+    }
+    function start1() {
+      const day = new Date();
+      let year = day.getFullYear();
+      let month = day.getMonth()+1;
+      let day1 = day.getDate();
+      let week = day.getDay();
+      let h = day.getHours();
+      let m = day.getMinutes();
+      let s = day.getSeconds();
+      month = addZero(month);
+      day1 = addZero(day1);
+      m = addZero(m);
+      s = addZero(s);      
+      h = changeHour(h);
+      h = addZero(h);
+      week = getweekday1(week);
+      para1.innerHTML = year + '年 ' + month + '月' + day1 + '日 ' + week + ' ' + h + ':' + m + ':' + s;
+      t = setTimeout(start1, 500);
+    }
+    start1();
+    function start2() {
+      const day = new Date();
+      let year = day.getFullYear();
+      let month = day.getMonth()+1;
+      let day1 = day.getDate();
+      let week = day.getDay();
+      let h = day.getHours();
+      let m = day.getMinutes();
+      let s = day.getSeconds();
+      month = addZero(month);
+      day1 = addZero(day1);
+      m = addZero(m);
+      s = addZero(s);      
+      h = changeHour(h);
+      h = addZero(h);
+      week = getweekday2(week);
+      para2.innerHTML = year + '-' + month + '-' + day1 + ' ' + week + ' ' + h + ':' + m + ':' + s + ' PM';
+      t = setTimeout(start2, 500);
+    }
+    start2();
+  </script>
+</body>
+</html>
