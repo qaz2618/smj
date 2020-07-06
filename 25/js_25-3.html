@@ -24,7 +24,7 @@
   <select id="second-select">
   </select>
 
-  <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+  <p id="result-wrapper">现在距离 2000年1月1日星期日 00:00:00 还有 X 天 X 小时 X 分 X 秒</p>
   <script>
     // 初始化
     let year = document.querySelector('#year-select');
@@ -33,7 +33,7 @@
     let hour = document.querySelector('#hour-select');
     let minite = document.querySelector('#minite-select');
     let second = document.querySelector('#second-select');
-    let selects = document.getElementsByTagName('select');
+    let selects = document.querySelectorAll('select');
     let para = document.querySelector('#result-wrapper');
 
     // 添加option标签
@@ -77,11 +77,76 @@
         if (key === '0' || key === '1') {
           yearValue = Number(document.getElementById('year-select').value);
           monthValue = Number(document.getElementById('month-select').value);
-          leapYear(yearValue, monthValue);
-        }
+          leapYear(yearValue, monthValue);         
+        } 
+        yearValue = Number(document.getElementById('year-select').value);
+        monthValue = Number(document.getElementById('month-select').value);
+        dateValue = Number(document.getElementById('day-select').value);
+        hourValue = Number(document.getElementById('hour-select').value);
+        secondValue = Number(document.getElementById('second-select').value);
+        minuteValue = Number(document.getElementById('minite-select').value);
+        let dateSet = new Date(yearValue, monthValue - 1, dateValue, hourValue, minuteValue, secondValue);
+        para.innerHTML = distance(dateSet) + ' ' + difference(dateSet);
       }         
     }
     
+    // 现在距离
+    function distance(date) {
+      let year = date.getFullYear();
+      let month = date.getMonth()+1;
+      let day = date.getDate();
+      let week = date.getDay();
+      let h = date.getHours();
+      let m = date.getMinutes();
+      let s = date.getSeconds();
+      month = addZero(month);
+      day = addZero(day);
+      m = addZero(m);
+      s = addZero(s);      
+      h = addZero(h);
+      week = getweekday(week);
+      let result = '现在距离' + year + '年' + month + '月' + day + '日' + week + ' ' + h + ':' + m +':' + s;
+      return result;
+    }
+
+    // 差值
+    function  difference(date) {
+      let dataNow = new Date();
+      let timesNow = dataNow.getTime();
+      let timesSet = date.getTime();
+      let differ = timesSet - timesNow;
+      let result;
+      if (differ > 0) {
+        result = '还有' + getDifference(differ);
+      } else {
+        result = '已经过去' + getDifference(differ);
+      }
+      return result;
+    }
+
+    // 差值转变
+    function getDifference(differ) {
+      if (differ < 0) {
+        differ = -differ;
+      }
+      let minutes = 1000 * 60;
+      let hours = minutes * 60;
+      let days = hours * 24;
+      let showDays = Math.floor(differ / days);
+      let extDays = differ % days;
+
+      if (extDays !== 0) {
+        var showHours = Math.floor(extDays / hours);
+        if (extDays % hours !== 0) {
+          var showMinutes = Math.floor((extDays % hours) / minutes);
+        }
+        if ((extDays % hours) % minutes !== 0) {
+          var showSeconds = Math.floor(((extDays % hours) % minutes) / 1000)
+        }
+      }
+      let result = showDays + '天' + showHours + '小时' + showMinutes + '分' + showSeconds + '秒'
+      return result;
+    }
     // 补零
     function addZero(a) {
       if (a < 10) {
@@ -92,25 +157,25 @@
     // 星期几
     function getweekday(weekday) {
       switch (weekday) {
-        case 0:
+        case 1:
           d = "星期一"
           break;
-        case 1:
+        case 2:
           d = "星期二"
           break;
-        case 2:
+        case 3:
           d = "星期三"
           break;
-        case 3:
+        case 4:
           d = "星期四"
           break;
-        case 4:
+        case 5:
           d = "星期五"
           break;
-        case 5:
+        case 6:
           d = "星期六"
           break;
-        case 6:
+        case 0:
           d = "星期日"
           break;
       }
