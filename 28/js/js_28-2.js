@@ -6,7 +6,7 @@ let nowSelectTipIndex = 0;
 // input.addEventListener('input',function(){
 //   console.log('event handle');
 // },false);
-
+input1.focus();
 input1.oninput = function(e) {
   if (!(e.keyCode == 40 || e.keyCode == 38 || e.keyCode == 13)) {
     nowSelectTipIndex = 0;
@@ -84,6 +84,7 @@ list.onclick = function (e) {
     input1.value = htmlDecode(target.innerHTML);
     hide();
   }
+  input1.focus();
 }
 
 // 监听特殊3个键的键盘事件，这个事件可能就是inputDom的输入监听，也有可能是另外一个，请自己测试后判断
@@ -122,6 +123,10 @@ document.onkeydown = function(e) {
       input1.value = htmlDecode(x[0].innerHTML);
       hide();
     }
+    if (key == 27) {
+      input1.setSelectionRange(0, -1); //ESC全选上文本框内容
+      hide();
+     }
 }
 
 function getHide() {

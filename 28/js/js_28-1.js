@@ -4,7 +4,7 @@ let list = document.querySelector('#email-sug-wrapper');
 // input.addEventListener('input',function(){
 //   console.log('event handle');
 // },false);
-
+input1.focus();
 input1.oninput = function(e) {
   list.innerHTML = '';
   addul();
@@ -82,6 +82,7 @@ list.onclick = function (e) {
     input1.value = htmlDecode(target.innerHTML);
     hide();
   }
+  input1.focus();
 }
 
 function getReturn() {
@@ -138,6 +139,10 @@ document.onkeydown = function(e) {
     input1.value = htmlDecode(x[0].innerHTML);
     hide();
   }
+  if (key == 27) {
+    input1.setSelectionRange(0, -1); //ESC全选上文本框内容
+    hide();
+   }
 }
 
 function getHide() {
