@@ -3,7 +3,7 @@ let productSelAll = document.getElementsByName('productall');
 let region = document.getElementsByName('region');
 let product = document.getElementsByName('product');
 let gettable = document.querySelector('#table-wrapper');
-
+initLocalStorage();
 
 for (let i = 0; i < region.length; i++) {
   region[i].onchange = function () {
@@ -47,3 +47,5 @@ function getNum() {
   }
   return arr;
 }
+
+

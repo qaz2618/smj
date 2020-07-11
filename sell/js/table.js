@@ -15,6 +15,7 @@ function getNewTable() {
     table3();
   }
   gettable.appendChild(table);
+  return table;
 }
 
 function table1() {
@@ -25,6 +26,7 @@ function table1() {
         let th = tr0.insertCell(tr0.cells.length);
         th.innerHTML = headTable[i];
       }
+
   for (let i = 0; i < arr.length; i++) {
     if (i == 0) {
       let tr = table.insertRow(table.rows.length);
@@ -37,6 +39,10 @@ function table1() {
         for (let j = 0; j < 12; j++) {
           let td = tr.insertCell(j + 2);
             td.innerHTML = arr[i].sale[j];
+            td.setAttribute('data-product', arr[i]['product']);
+            td.setAttribute('data-region', arr[i]['region']);
+            td.setAttribute('data-month', j);
+            td.setAttribute('class', 'sale');
         }
     } else {
       let tr = table.insertRow(table.rows.length);
@@ -46,6 +52,10 @@ function table1() {
         for (let j = 0; j < 12; j++) {
           let td = tr.insertCell(j + 1);
             td.innerHTML = arr[i].sale[j];
+            td.setAttribute('data-product', arr[i]['product']);
+            td.setAttribute('data-region', arr[i]['region']);
+            td.setAttribute('data-month', j);
+            td.setAttribute('class', 'sale');
         }
     }
   }
@@ -73,6 +83,10 @@ function table2() {
       for (let j = 0; j < 12; j++) {
         let td = tr.insertCell(j + 2);
         td.innerHTML = arr[i].sale[j];
+        td.setAttribute('data-product', arr[i]['product']);
+        td.setAttribute('data-region', arr[i]['region']);
+        td.setAttribute('data-month', j);
+        td.setAttribute('class', 'sale');
       }
     } else {
       let tr = table.insertRow(table.rows.length);
@@ -82,6 +96,10 @@ function table2() {
       for (let j = 0; j < 12; j++) {
         let td = tr.insertCell(j + 1);
         td.innerHTML = arr[i].sale[j];
+        td.setAttribute('data-product', arr[i]['product']);
+        td.setAttribute('data-region', arr[i]['region']);
+        td.setAttribute('data-month', j);
+        td.setAttribute('class', 'sale');
       }
     }
   }
@@ -109,6 +127,10 @@ function table3() {
         for (let j = 0; j < 12; j++) {
           let td = tr.insertCell(j + 2);
             td.innerHTML = arr[z + i * regionText.length].sale[j];
+            td.setAttribute('data-product', arr[i]['product']);
+            td.setAttribute('data-region', arr[i]['region']);
+            td.setAttribute('data-month', j);
+            td.setAttribute('class', 'sale');
         }
       } else {
           let tr = table.insertRow(table.rows.length);
@@ -118,6 +140,10 @@ function table3() {
           for (let j = 0; j < 12; j++) {
             let td = tr.insertCell(j + 1);
               td.innerHTML = arr[z + i * regionText.length].sale[j];
+              td.setAttribute('data-product', arr[i]['product']);
+            td.setAttribute('data-region', arr[i]['region']);
+            td.setAttribute('data-month', j);
+            td.setAttribute('class', 'sale');
           }
         }
     }
