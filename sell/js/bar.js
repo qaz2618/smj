@@ -13,7 +13,7 @@ function getBar(data) {
     var barColor = "#0DAFF4",
         axisColor = "rgb(0,99,99)";
     // 拿到柱状图中的最大值Max
-    var max = data[0];
+    var max = 0;
     for (var i in data) {
         if (data[i] > max) {
             max = data[i];
@@ -22,7 +22,7 @@ function getBar(data) {
     // 根据Max和你用来绘制柱状图图像区域的高度，进行一个数据和像素的折算比例
     let bl = axisY/max;
     let arry4 = [];
-    for (let i = 0; i < data.length; i++) {
+    for (let i in data) {
       arry4[i] = data[i] * bl;
     }
     // console.log(arry4);

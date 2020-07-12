@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+    <div id="contABC"></div>
+    <div id="contDEF"></div>
+    <script>
+        let buttons = document.getElementsByTagName('button');
+        let contABC = document.getElementById('contABC');
+        let contDEF = document.getElementById('contDEF');
+        let hash1 = '',
+            hash2 = '';
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = function () {
+                if (buttons[i].id === "a" || buttons[i].id === "b" || buttons[i].id === "c") {
+                    hash1 = "contABC=" + buttons[i].innerHTML;
+                } else {
+                    hash2 = "contDEF=" + buttons[i].innerHTML;
+                }
+                window.location.hash = hash1 + "&" + hash2;
+            }
+
+        }
+
+        window.addEventListener('hashchange', render, false);
+        render();
+
+        function parsingHash() {
+            let s = window.location.hash;
+            let sArry = s.split('&');
+            // console.log(s);
+            // console.log(sArry);
+            return sArry;
+        }
+
+        function render() {
+          let content2;
+            let contents = parsingHash();
+            let content1 = contents[0].substring(contents[0].length - 1);
+            if (contents[1] !== '' && contents[1] !== undefined) {
+              content2 = contents[1].substring(contents[1].length - 1);
+              contDEF.innerHTML = content2;
+            }
+            contABC.innerHTML = content1;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 // 全局变量，用于查询存储在localStorage中的数据
-var KEY = "LOCAL_DATA";
+let KEY = "LOCAL_DATA";
 //初始化localStorage
 function initLocalStorage() {
     var data = [];
@@ -17,10 +17,9 @@ function getLocalStorage() {
 
 //更新localStorage
 function updateLocalStorage(product, region, index, value) {
-  var localData = getLocalStorage(),
-      i;
+    let localData = getLocalStorage();
 
-  for (i = 0; i < localData.length; i++) {
+  for (let i = 0; i < localData.length; i++) {
       if (localData[i]["product"] === product && localData[i]["region"] === region) {
           localData[i]["sale"][index] = value;
           break;

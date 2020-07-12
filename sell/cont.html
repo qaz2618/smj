@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="a">A</button>
+  <button id="b">B</button>
+  <button id="c">C</button>
+  <div id="cont"></div>
+</body>
+<script>
+  let btn =document.querySelectorAll('button');
+  let cont = document.querySelector('#cont');
+  function parsingHash() {
+    let s = window.location.hash;
+    return s ? s.substring(1) : null;
+  }
+  function render() {
+    let content = parsingHash();
+    cont.innerHTML = content;
+}
+        for (let i = 0; i < btn.length; i++) {
+
+            btn[i].onclick = function () {
+            window.location.hash = btn[i].innerHTML;
+            }
+        }
+        window.addEventListener('hashchange',render,false);
+        render();
+</script>
+</html>

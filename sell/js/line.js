@@ -12,7 +12,7 @@ function getLine(data) {
   //定义好每两个数据点之间的横向间隔距离
   var interval = 40;
   //拿到折线图中的最大值Max
-  var max = data[0];
+  var max = 0;
   for (var i in data) {
       if (data[i] > max) {
           max = data[i];
@@ -21,7 +21,7 @@ function getLine(data) {
   //根据Max和你用来绘制折线图图像区域的高度， 进行一个数据和像素的折算比例
   let bl = axisY/max;
   let arry4 = [];
-  for (let i = 0; i < data.length; i++) {
+  for (let i in data) {
     arry4[i] = data[i] * bl;
   }
   //绘制横轴及纵轴
@@ -68,7 +68,7 @@ function getLineAll(data) {
   //定义好每两个数据点之间的横向间隔距离
   interval = 40;
   var max = 0;
-  for (let i = 0; i < data.length; i++) {
+  for (let i in data) {
     for (let j in data[i]) {
       if (data[i][j] > max) {
         max = data[i][j];
